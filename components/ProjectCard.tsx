@@ -17,6 +17,7 @@ const ProjectCard = (props: Props) => {
       <div className="h-full relative flex-2 md:col-span-3">
         <Image
           src={image}
+          priority={true}
           alt="project"
           layout="fill"
           quality={100}
