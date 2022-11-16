@@ -46,7 +46,7 @@ const ProjectsSlider = (props: Props) => {
         />
       )}
       {currentProject === 3 && (
-        <div className="w-[1200px] h-[500px] mx-auto flex items-center justify-center text-4xl">
+        <div className="w-screen xl:w-[1200px] h-[400px] sm:h-[450px] xl:h-[500px] mx-auto flex items-center justify-center text-4xl">
           <p className="flex gap-2">
             <a
               href="https://github.com/KlaudiuszB5528"
