@@ -41,7 +41,7 @@ const Projects = () => {
     visible: { opacity: 1, x: 0 },
   };
   return (
-    <div className="h-screen w-screen  relative z-10 py-4 md:pt-16 md:pb-4">
+    <div className="h-screen w-screen overflow-hidden  relative z-10 py-4 md:pt-16 md:pb-4">
       <m.div
         variants={container}
         initial="hidden"

@@ -1,7 +1,7 @@
 const HeroBg = () => {
   return (
     <>
-      <div className="absolute left-10 top-[60%]  lg:left-20 lg:top-24 opacity-5 text-sm w-40">
+      <div className="absolute left-10 top-[60%]  lg:left-20 lg:top-24 opacity-10 lg:opacity-5 text-sm w-40">
         <q>
           {` “Design doesn't mean that every person [is] gonna like, love it, but
           that's the creativity of [an] eye which creates something different.”`}
