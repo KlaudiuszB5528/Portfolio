@@ -13,15 +13,15 @@ import {
 const SkillsBg = () => {
   return (
     <>
-      <SiNextdotjs className="absolute opacity-[0.03] top-32 lg:top-[25%] lg:left-[25%] text-6xl" />
-      <FaReact className="absolute opacity-[0.03] top-[85%] left-10 lg:top-[40%] lg:left-[18%] text-5xl" />
-      <SiTypescript className="absolute opacity-[0.03] left-36 top-[50%] lg:top-[40%] lg:left-[75%] text-5xl" />
-      <SiJavascript className="absolute opacity-[0.03] right-36 bottom-40 lg:bottom-[10%] lg:right-[50%] text-5xl" />
-      <SiTailwindcss className="absolute opacity-[0.03] top-24 left-[80%] lg:top-[66%] lg:left-[77%] text-3xl" />
-      <SiSass className="absolute opacity-[0.03] right-6 top-[55%] lg:right-[30%] text-4xl" />
-      <SiHtml5 className="absolute opacity-[0.02] top-[80%] right-[7%] text-3xl" />
-      <SiCss3 className="absolute opacity-[0.02] top-[65%] left-10 lg:top-[75%] lg:left-[30%] text-3xl" />
-      <SiGithub className="absolute opacity-[0.02] bottom-[5%] left-[40%] text-2xl" />
+      <SiNextdotjs className="absolute opacity-5 top-32 lg:top-[25%] lg:left-[25%] text-6xl" />
+      <FaReact className="absolute opacity-5 top-[85%] left-10 lg:top-[40%] lg:left-[18%] text-5xl" />
+      <SiTypescript className="absolute opacity-5 left-36 top-[50%] lg:top-[40%] lg:left-[75%] text-5xl" />
+      <SiJavascript className="absolute opacity-5 right-36 bottom-40 lg:bottom-[10%] lg:right-[50%] text-5xl" />
+      <SiTailwindcss className="absolute opacity-5 top-24 left-[80%] lg:top-[66%] lg:left-[77%] text-3xl" />
+      <SiSass className="absolute opacity-5 right-6 top-[55%] lg:right-[30%] text-4xl" />
+      <SiHtml5 className="absolute opacity-5 top-[80%] right-[7%] text-3xl" />
+      <SiCss3 className="absolute opacity-5 top-[65%] left-10 lg:top-[75%] lg:left-[30%] text-3xl" />
+      <SiGithub className="absolute opacity-5 bottom-[5%] left-[40%] text-2xl" />
     </>
   );
 };
