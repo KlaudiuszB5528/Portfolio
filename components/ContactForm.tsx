@@ -60,7 +60,9 @@ const ContactForm = (props: Props) => {
       | React.FocusEvent<HTMLTextAreaElement>
   ) => {
     formik.setFieldTouched(e.target.name);
-    router.replace("/#contact");
+    setTimeout(() => {
+      router.replace("/#contact");
+    }, 100);
   };
 
   return (
