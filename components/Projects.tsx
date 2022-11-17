@@ -46,7 +46,7 @@ const Projects = () => {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        onViewportLeave={() => setCurrentProject(0)}
+        viewport={{ once: true }}
         className="h-full w-full flex flex-col items-center xl:justify-center gap-10 lg:gap-6"
       >
         <m.h2 variants={h2} className="mt-6 md:mt-0 text-6xl">
