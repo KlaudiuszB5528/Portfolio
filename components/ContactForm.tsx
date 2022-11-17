@@ -59,8 +59,8 @@ const ContactForm = (props: Props) => {
       | React.FocusEvent<HTMLInputElement>
       | React.FocusEvent<HTMLTextAreaElement>
   ) => {
-    formik.setFieldTouched(e.target.name, true);
-    router.push("/#contact");
+    formik.setFieldTouched(e.target.name);
+    router.replace("/#contact");
   };
 
   return (
