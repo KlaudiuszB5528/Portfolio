@@ -69,6 +69,7 @@ const ContactForm = (props: Props) => {
         <input
           type="text"
           name="name"
+          autoComplete="off"
           value={formik.values.name}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
@@ -91,6 +92,7 @@ const ContactForm = (props: Props) => {
         <input
           type="email"
           name="email"
+          autoComplete="off"
           value={formik.values.email}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
