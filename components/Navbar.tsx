@@ -45,7 +45,7 @@ const Navbar = () => {
       animate="visible"
       className={`xl:container w-full fixed top-0 left-1/2 -translate-x-1/2 z-50 ${
         windowHeight > 400 ? "flex" : "hidden"
-      } items-center justify-between text-xl sm:text-2xl py-2 lg:py-4 px-8 md:h-20 bg-myBlack/95 backdrop-blur-sm text-white`}
+      } items-center justify-between text-xl sm:text-2xl py-2 lg:py-4 px-8 md:h-20 bg-myBlack/90 backdrop-blur-sm text-white`}
     >
       <motion.h2 variants={logo} className="font-island text-2xl sm:text-4xl">
         {`<KB>`}
