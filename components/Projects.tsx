@@ -53,7 +53,7 @@ const Projects = () => {
           Projects
         </m.h2>
         <m.div variants={image} className="relative z-[2]">
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence mode="wait">
             <m.div
               key={currentProject}
               initial={{ opacity: 0, x: -150 }}
