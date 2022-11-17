@@ -6,7 +6,7 @@ import ProjectsDots from "./ProjectsDots";
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
-  const [marginBottom, setMarginBottom] = useState(0);
+  const [marginBottom, setMarginBottom] = useState("0px");
   const [windowHeight, setWindowHeight] = useState(0);
 
   const nextSlide = () => {
@@ -55,15 +55,15 @@ const Projects = () => {
 
   useEffect(() => {
     if (windowHeight > 500) {
-      setMarginBottom(40);
+      setMarginBottom("160px");
     } else {
-      setMarginBottom(96);
+      setMarginBottom("2000px");
     }
   }, [windowHeight]);
 
   return (
     <div
-      className={`h-screen w-screen relative z-10 py-4 md:pt-16 md:pb-4 mt-20 mb-${marginBottom}`}
+      className={`h-screen w-screen relative z-10 py-4 md:pt-16 md:pb-4 mb- mt-20 mb-${marginBottom}`}
     >
       <m.div
         variants={container}
