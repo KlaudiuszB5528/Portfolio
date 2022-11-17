@@ -34,8 +34,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center relative z-10 mt-[200px]">
-      <div className="absolute top-1/2 -translate-y-1/2 w-screen bg-white opacity-[0.03] h-40 lg:h-[260px] skew-y-6 lg:skew-y-12 -z-1" />
+    <div className="h-screen flex flex-col items-center justify-center relative z-10 mt-40">
+      <div className="absolute top-1/2 -translate-y-1/2 w-screen bg-white opacity-[0.03] h-[260px] skew-y-12 -z-1" />
       <m.div
         variants={container}
         initial="hidden"
@@ -43,7 +43,7 @@ const Contact = () => {
         onViewportLeave={() => {
           setIsSubmitted(false);
         }}
-        className="flex flex-col items-center h-screen w-screen relative z-[1] justify-center md:justify-evenly gap-6"
+        className="flex flex-col items-center h-full w-full relative z-[1] justify-center md:justify-evenly gap-6"
       >
         <m.h2 variants={header} className="text-6xl mb-10 md:mb-0">
           Get In Touch

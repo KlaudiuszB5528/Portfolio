@@ -19,19 +19,19 @@ const Home: NextPage = () => {
       <Navbar />
       <main>
         <Welcome />
-        <section id="hero" className="snap-center">
+        <section id="hero" className="snap-center snap-always">
           <Hero />
         </section>
-        <section id="about" className="snap-center">
+        <section id="about" className="snap-center snap-always">
           <About />
         </section>
-        <section id="skills" className="snap-center">
+        <section id="skills" className="snap-center snap-always">
           <Skills />
         </section>
-        <section id="projects" className="snap-center">
+        <section id="projects" className="snap-center snap-always">
           <Projects />
         </section>
-        <section id="contact" className="snap-end">
+        <section id="contact" className="snap-center snap-always">
           <Contact />
         </section>
       </main>
