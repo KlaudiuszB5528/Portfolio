@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion as m } from "framer-motion";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import ProjectsSlider from "./ProjectsSlider";
@@ -6,8 +6,6 @@ import ProjectsDots from "./ProjectsDots";
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
-  const [marginBottom, setMarginBottom] = useState("0px");
-  const [windowHeight, setWindowHeight] = useState(0);
 
   const nextSlide = () => {
     setCurrentProject(currentProject === 3 ? 0 : currentProject + 1);
@@ -43,27 +41,9 @@ const Projects = () => {
     visible: { opacity: 1, x: 0 },
   };
 
-  const handleResize = () => {
-    setWindowHeight(window.innerHeight);
-  };
-
-  useEffect(() => {
-    setWindowHeight(window.innerHeight);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    if (windowHeight > 500) {
-      setMarginBottom("160px");
-    } else {
-      setMarginBottom("2000px");
-    }
-  }, [windowHeight]);
-
   return (
     <div
-      className={`h-screen w-screen relative z-10 py-4 md:pt-16 md:pb-4 mb- mt-20 mb-${marginBottom}`}
+      className={`h-screen w-screen relative z-10 py-4 md:pt-16 md:pb-4 mb- mt-20 mb-40`}
     >
       <m.div
         variants={container}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion as m, AnimatePresence } from "framer-motion";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import SubmitSuccess from "./SubmitSuccess";
@@ -7,6 +7,8 @@ import ContactForm from "./ContactForm";
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [name, setName] = useState("");
+  const [padding, setPadding] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0);
 
   const container = {
     hidden: { opacity: 0, y: 50 },
@@ -33,16 +35,36 @@ const Contact = () => {
     visible: { opacity: 1, y: 0 },
   };
 
+  const handleResize = () => {
+    setWindowHeight(window.innerHeight);
+  };
+
+  useEffect(() => {
+    setWindowHeight(window.innerHeight);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (windowHeight > 500) {
+      setPadding(4);
+    } else {
+      setPadding(96);
+    }
+  }, [windowHeight]);
+
   return (
-    <div className="h-screen flex flex-col flex-shrink items-center justify-center relative z-10">
+    <div
+      className={`h-full py-${padding} flex flex-col items-center justify-center relative z-10`}
+    >
       <m.div
         variants={container}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
-        className="flex flex-col flex-shrink items-center h-full w-full relative z-[1] justify-center gap-10"
+        className="flex flex-col items-center h-full w-full relative z-[1] justify-center gap-10"
       >
-        <m.h2 variants={header} className="text-6xl md:mb-0">
+        <m.h2 variants={header} className="text-6xl">
           Get In Touch
         </m.h2>
         <m.div variants={content}>
