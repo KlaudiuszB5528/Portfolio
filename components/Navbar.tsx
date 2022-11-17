@@ -32,7 +32,7 @@ const Navbar = () => {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="container fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between text-xl sm:text-2xl py-2 lg:py-4 px-8 md:h-20 bg-myBlack text-white"
+      className="xl:container w-full fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between text-xl sm:text-2xl py-2 lg:py-4 px-8 md:h-20 bg-myBlack text-white"
     >
       <motion.h2 variants={logo} className="font-island text-2xl sm:text-4xl">
         {`<KB>`}

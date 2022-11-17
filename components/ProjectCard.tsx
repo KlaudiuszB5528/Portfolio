@@ -21,10 +21,10 @@ const ProjectCard = (props: Props) => {
           alt="project"
           layout="fill"
           quality={100}
-          className="rounded-t-xl lg:rounded-t-none lg:rounded-l-xl"
+          className="rounded-t-xl md:rounded-t-none md:rounded-l-xl"
         />
       </div>
-      <div className="bg-gray-50 rounded-b-xl lg:rounded-l-none lg:rounded-r-xl text-myBlack flex flex-col gap-1 lg:grid lg:grid-rows-4 xl:grid-rows-5 items-center md:py-2">
+      <div className="bg-gray-50 rounded-b-xl md:rounded-l-none md:rounded-r-xl text-myBlack flex flex-col gap-1 lg:grid lg:grid-rows-4 xl:grid-rows-5 items-center md:py-2">
         <h3 className="w-full lg:pb-4 underline underline-offset-4 text-xl lg:text-4xl flex justify-center">
           {title}
         </h3>

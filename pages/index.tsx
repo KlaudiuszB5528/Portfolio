@@ -10,7 +10,7 @@ import Contact from "../components/Contact";
 
 const Home: NextPage = () => {
   return (
-    <div className="h-full md:h-screen scroll-smooth overflow-x-hidden overflow-y-scroll  bg-myBlack text-white font-amiri scrollbar-track-myBlack/80 scrollbar-white/90 scrollbar-thin">
+    <div className="h-full md:h-screen snap-y snap-mandatory scroll-smooth overflow-x-hidden overflow-y-scroll  bg-myBlack text-white font-amiri scrollbar-track-myBlack/80 scrollbar-white/90 scrollbar-thin">
       <Head>
         <title>Klaudiusz Biegacz</title>
         <meta name="description" content="Klaudiusz Biegacz portfolio page" />
@@ -19,19 +19,19 @@ const Home: NextPage = () => {
       <Navbar />
       <main>
         <Welcome />
-        <section id="hero">
+        <section className="snap-center snap-always" id="hero">
           <Hero />
         </section>
-        <section id="about">
+        <section className="snap-center snap-always" id="about">
           <About />
         </section>
-        <section id="skills">
+        <section className="snap-center snap-always" id="skills">
           <Skills />
         </section>
-        <section id="projects">
+        <section className="snap-center snap-always" id="projects">
           <Projects />
         </section>
-        <section id="contact">
+        <section className="snap-center snap-always" id="contact">
           <Contact />
         </section>
       </main>
