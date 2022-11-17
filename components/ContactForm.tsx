@@ -53,7 +53,7 @@ const ContactForm = (props: Props) => {
   return (
     <form
       onSubmit={formik.handleSubmit}
-      className="flex w-3/4 md:w-full mx-auto h-[300px] md:h-[420px] flex-col space-y-1 md:space-y-4"
+      className="flex w-3/4 md:w-full mx-auto flex-col space-y-1 md:space-y-4"
     >
       <div className="flex flex-col gap-1">
         <label

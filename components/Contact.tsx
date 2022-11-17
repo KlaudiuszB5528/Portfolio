@@ -34,7 +34,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center relative z-10 mt-40">
+    <div className="h-screen flex flex-col items-center justify-center relative z-10">
       <m.div
         variants={container}
         initial="hidden"
@@ -42,7 +42,7 @@ const Contact = () => {
         onViewportLeave={() => {
           setIsSubmitted(false);
         }}
-        className="flex flex-col items-center h-full w-full relative z-[1] justify-center md:justify-evenly gap-16 md:gap-6"
+        className="flex flex-col items-center h-full w-full relative z-[1] justify-center gap-10"
       >
         <m.h2 variants={header} className="text-6xl md:mb-0">
           Get In Touch
@@ -67,7 +67,7 @@ const Contact = () => {
         </m.div>
         <m.footer
           variants={footer}
-          className="absolute bottom-1 flex w-full items-center justify-center gap-2"
+          className="flex w-full items-center justify-center gap-2"
         >
           <p className="font-island">{`© ${new Date().getFullYear()} KB-Portfolio`}</p>
           <a href="https://github.com/KlaudiuszB5528" target="blank">
