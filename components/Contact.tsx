@@ -34,8 +34,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center relative z-10">
-      <div className="absolute top-1/2 -translate-y-1/2 w-screen bg-white opacity-[0.03] h-[260px] skew-y-12 -z-1" />
+    <div className="h-screen flex flex-col items-center justify-center relative z-10 mt-96">
       <m.div
         variants={container}
         initial="hidden"
@@ -82,6 +81,7 @@ const Contact = () => {
           </a>
         </m.footer>
       </m.div>
+      <div className="absolute top-1/2 -translate-y-1/2 w-screen bg-white opacity-[0.03] h-[260px] skew-y-12 -z-1" />
     </div>
   );
 };
