@@ -29,7 +29,7 @@ const Hero = () => {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="container h-full md:h-screen flex items-center justify-center text-6xl relative z-10 mx-auto py-20"
+      className="container min-h-screen flex items-center justify-center text-6xl relative z-10 mx-auto py-20"
     >
       <m.div
         variants={item}

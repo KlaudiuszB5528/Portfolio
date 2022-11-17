@@ -69,7 +69,6 @@ const ContactForm = (props: Props) => {
         <input
           type="text"
           name="name"
-          autoFocus={true}
           value={formik.values.name}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
@@ -92,7 +91,6 @@ const ContactForm = (props: Props) => {
         <input
           type="email"
           name="email"
-          autoFocus={true}
           value={formik.values.email}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
@@ -117,7 +115,6 @@ const ContactForm = (props: Props) => {
         <textarea
           name="message"
           rows={5}
-          autoFocus={true}
           value={formik.values.message}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
