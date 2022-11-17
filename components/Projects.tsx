@@ -53,12 +53,12 @@ const Projects = () => {
           Projects
         </m.h2>
         <m.div variants={image} className="relative z-[2]">
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="popLayout">
             <m.div
               key={currentProject}
               initial={{ opacity: 0, x: -150 }}
-              animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
-              exit={{ opacity: 0, x: 150, transition: { duration: 0.4 } }}
+              animate={{ opacity: 1, x: 0, transition: { duration: 0.6 } }}
+              exit={{ opacity: 0, x: 150, transition: { duration: 0.3 } }}
             >
               <ProjectsSlider currentProject={currentProject} />
             </m.div>
