@@ -10,7 +10,7 @@ import Contact from "../components/Contact";
 
 const Home: NextPage = () => {
   return (
-    <div className="h-full md:h-screen snap-y snap-mandatory scroll-smooth overflow-x-hidden overflow-y-scroll  bg-myBlack text-white font-amiri scrollbar-track-myBlack/80 scrollbar-white/90 scrollbar-thin">
+    <div className="h-screen snap-y snap-mandatory scroll-smooth overflow-x-hidden overflow-y-scroll  bg-myBlack text-white font-amiri scrollbar-track-myBlack/80 scrollbar-white/90 scrollbar-thin">
       <Head>
         <title>Klaudiusz Biegacz</title>
         <meta name="description" content="Klaudiusz Biegacz portfolio page" />

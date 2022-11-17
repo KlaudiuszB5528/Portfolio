@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { AiFillHome, AiFillInfoCircle, AiFillProject } from "react-icons/ai";
@@ -6,6 +6,7 @@ import { BsEnvelopeFill } from "react-icons/bs";
 import { GiSkills } from "react-icons/gi";
 
 const Navbar = () => {
+  const [windowHeight, setWindowHeight] = useState(0);
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -18,6 +19,16 @@ const Navbar = () => {
       },
     },
   };
+
+  const handleResize = () => {
+    setWindowHeight(window.innerHeight);
+  };
+
+  useEffect(() => {
+    setWindowHeight(window.innerHeight);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const logo = {
     hidden: { opacity: 0, x: -100 },
@@ -32,7 +43,9 @@ const Navbar = () => {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="xl:container w-full fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between text-xl sm:text-2xl py-2 lg:py-4 px-8 md:h-20 bg-myBlack text-white"
+      className={`xl:container w-full fixed top-0 left-1/2 -translate-x-1/2 z-50 ${
+        windowHeight > 400 ? "flex" : "hidden"
+      } items-center justify-between text-xl sm:text-2xl py-2 lg:py-4 px-8 md:h-20 bg-myBlack text-white`}
     >
       <motion.h2 variants={logo} className="font-island text-2xl sm:text-4xl">
         {`<KB>`}
