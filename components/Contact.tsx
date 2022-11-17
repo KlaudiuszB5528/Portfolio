@@ -34,16 +34,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center relative z-10 mt-20">
+    <div className="h-screen flex flex-col flex-shrink items-center justify-center relative z-10">
       <m.div
         variants={container}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
-        onViewportLeave={() => {
-          setIsSubmitted(false);
-        }}
-        className="flex flex-col items-center h-full w-full relative z-[1] justify-center gap-10"
+        className="flex flex-col flex-shrink items-center h-full w-full relative z-[1] justify-center gap-10"
       >
         <m.h2 variants={header} className="text-6xl md:mb-0">
           Get In Touch
