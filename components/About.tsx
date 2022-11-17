@@ -1,4 +1,3 @@
-import React from "react";
 import { motion as m } from "framer-motion";
 import AboutBg from "./AboutBg";
 
@@ -26,11 +25,12 @@ const About = () => {
   };
 
   return (
-    <m.div className="h-screen w-screen p-4 sm:p-12 md:p-32 flex items-center relative z-10">
+    <div className="h-screen w-screen p-4 sm:p-12 md:p-32 flex items-center relative z-10 mt-20">
       <m.div
         variants={container}
         initial="hidden"
         whileInView="visible"
+        viewport={{ amount: 0.5, once: true }}
         className="text-center flex flex-col max-w-2xl mx-auto gap-4"
       >
         <m.h2 variants={item} className="text-6xl mb-10">
@@ -54,7 +54,7 @@ const About = () => {
         >{`Ready to apply my passion for coding to a talented engineering team to develop quality solutions.`}</m.p>
       </m.div>
       <AboutBg />
-    </m.div>
+    </div>
   );
 };
 

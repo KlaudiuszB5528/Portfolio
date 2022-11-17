@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion as m, AnimatePresence } from "framer-motion";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import SubmitSuccess from "./SubmitSuccess";
@@ -34,11 +34,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center relative z-10">
+    <div className="h-screen flex flex-col items-center justify-center relative z-10 mt-20">
       <m.div
         variants={container}
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
         onViewportLeave={() => {
           setIsSubmitted(false);
         }}

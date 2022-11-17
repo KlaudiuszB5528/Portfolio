@@ -79,12 +79,6 @@ const Hero = () => {
             className="bg-white h-3 w-3 rounded-full"
           ></m.div>
         </m.div>
-        <span className="hidden md:block text-sm absolute -right-5 top-1/2 -translate-y-1/2 translate-x-full w-[325px]">
-          Please use arrow keys or navbar to navigate
-        </span>
-        <span className="md:hidden text-xs absolute top-full mt-2 sm:mt-0 translate-x-24 sm:-right-5 sm:top-1/2 -translate-y-1/2 sm:translate-x-full w-[325px]">
-          Please use navbar to navigate
-        </span>
       </div>
       <HeroCircles />
       <HeroBg />

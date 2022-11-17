@@ -8,9 +8,12 @@ const HeroBg = () => {
         </q>
         <p> – Bijay Chhetri</p>
       </div>
-      <div className="absolute right-20 top-24 lg:right-11 lg:top-40 opacity-5 text-xs sm:text-sm">
-        <q>Your most unhappy customers are your greatest source of learning.</q>
-        <p> - Bill Gates</p>
+      <div className="absolute right-20 top-24 lg:right-11 lg:top-40 opacity-5 w-96 text-xs sm:text-sm">
+        <q>
+          To program is to translate between the chaos of the chaos of the human
+          life and the line-by-line world of the computer.
+        </q>
+        <p> - Ellen Ullman</p>
       </div>
       <div className="absolute right-4 top-40 lg:right-40 lg:top-[45%] opacity-5 text-xs sm:text-sm w-40">
         <q>

@@ -41,12 +41,12 @@ const Projects = () => {
     visible: { opacity: 1, x: 0 },
   };
   return (
-    <div className="h-screen w-screen overflow-hidden  relative z-10 py-4 md:pt-16 md:pb-4">
+    <div className="h-screen w-screen relative z-10 py-4 md:pt-16 md:pb-4 mt-20">
       <m.div
         variants={container}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.5 }}
         className="h-full w-full flex flex-col items-center xl:justify-center gap-10 lg:gap-6"
       >
         <m.h2 variants={h2} className="mt-6 md:mt-0 text-6xl">

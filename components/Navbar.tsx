@@ -32,14 +32,14 @@ const Navbar = () => {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="container sticky top-0 z-50 flex items-center justify-between text-xl sm:text-2xl py-2 lg:py-4 px-8 md:h-20 bg-myBlack text-white mx-auto"
+      className="container fixed top-0 z-50 flex items-center justify-between text-xl sm:text-2xl py-2 lg:py-4 px-8 md:h-20 bg-myBlack text-white mx-auto"
     >
       <motion.h2 variants={logo} className="font-island text-2xl sm:text-4xl">
-        <Link href="/">{`<KB>`}</Link>
+        {`<KB>`}
       </motion.h2>
       <motion.div variants={navigation}>
         <ul className="flex gap-4">
-          <Link href="#hero">
+          <Link href="#hero" scroll={false}>
             <motion.li
               whileHover={{
                 scale: 1.05,
@@ -53,7 +53,7 @@ const Navbar = () => {
               <AiFillHome />
             </motion.li>
           </Link>
-          <Link href="#about">
+          <Link href="#about" scroll={false}>
             <motion.li
               whileHover={{
                 scale: 1.05,
@@ -67,7 +67,7 @@ const Navbar = () => {
               <AiFillInfoCircle />
             </motion.li>
           </Link>
-          <Link href="#skills">
+          <Link href="#skills" scroll={false}>
             <motion.li
               whileHover={{
                 scale: 1.05,
@@ -81,7 +81,7 @@ const Navbar = () => {
               <GiSkills />
             </motion.li>
           </Link>
-          <Link href="#projects">
+          <Link href="#projects" scroll={false}>
             <motion.li
               whileHover={{
                 scale: 1.05,
@@ -95,7 +95,7 @@ const Navbar = () => {
               <AiFillProject />
             </motion.li>
           </Link>
-          <Link href="#contact">
+          <Link href="#contact" scroll={false}>
             <motion.li
               whileHover={{
                 scale: 1.05,
