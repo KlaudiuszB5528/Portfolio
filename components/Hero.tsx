@@ -64,7 +64,7 @@ const Hero = () => {
         </p>
       </m.div>
 
-      <div className="absolute bottom-8 sm:bottom-4 left-[50%] -translate-x-1/2 flex justify-center ">
+      <div className="absolute bottom-24 sm:bottom-4 left-[50%] -translate-x-1/2 flex justify-center ">
         <m.div
           variants={item}
           className="border-4 border-white rounded-full flex justify-center items-center h-12 w-6"
