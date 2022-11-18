@@ -62,7 +62,7 @@ const ContactForm = (props: Props) => {
     formik.setFieldTouched(e.target.name);
     setTimeout(() => {
       router.replace("/#contact");
-    }, 100);
+    }, 150);
   };
 
   return (
@@ -88,7 +88,7 @@ const ContactForm = (props: Props) => {
           value={formik.values.name}
           onChange={formik.handleChange}
           onBlur={handleBlur}
-          className={`bg-transparent pr-2 border-b-2 border-gray-500 focus:outline-none focus:border-white ${
+          className={`bg-transparent pr-2 py-2 border-b-2 border-gray-500 focus:outline-none focus:border-white ${
             formik.errors.name && formik.touched.name ? "border-red-500" : ""
           }`}
         />
@@ -111,7 +111,7 @@ const ContactForm = (props: Props) => {
           value={formik.values.email}
           onChange={formik.handleChange}
           onBlur={handleBlur}
-          className={`bg-transparent border-b-2 pr-2 border-gray-500 focus:outline-none focus:border-white ${
+          className={`bg-transparent border-b-2 pr-2 py-2 border-gray-500 focus:outline-none focus:border-white ${
             formik.errors.email && formik.touched.email ? "border-red-500" : ""
           }`}
         />
@@ -135,7 +135,7 @@ const ContactForm = (props: Props) => {
           value={formik.values.message}
           onChange={formik.handleChange}
           onBlur={handleBlur}
-          className={`bg-transparent border-b-2 pr-2 border-gray-500 focus:outline-none focus:border-white resize-none ${
+          className={`bg-transparent border-b-2 pr-2 py-2 border-gray-500 focus:outline-none focus:border-white resize-none ${
             formik.errors.message && formik.touched.message
               ? "border-red-500"
               : ""
