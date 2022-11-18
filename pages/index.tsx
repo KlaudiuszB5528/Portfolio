@@ -13,7 +13,22 @@ const Home: NextPage = () => {
     <div className="h-screen scroll-smooth overflow-x-hidden overflow-y-scroll  bg-myBlack text-white font-amiri scrollbar-track-myBlack/80 scrollbar-white/90 scrollbar-thin">
       <Head>
         <title>Klaudiusz Biegacz</title>
-        <meta name="description" content="Klaudiusz Biegacz portfolio page" />
+        <meta
+          name="description"
+          content="Klaudiusz Biegacz frontend developer portfolio page"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Klaudiusz Biegacz" />
+        <meta name="copyright" content="Klaudiusz Biegacz" />
+        <meta property="og:type" content="portfolio" />
+        <meta
+          property="og:title"
+          content="Klaudiusz Biegacz frontend developer portfolio"
+        />
+        <meta
+          property="og:description"
+          content="Klaudiusz Biegacz frontend developer portfolio"
+        />
         <link rel="icon" href="/waving.svg" />
       </Head>
       <Navbar />
