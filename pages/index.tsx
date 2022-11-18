@@ -17,7 +17,10 @@ const Home: NextPage = () => {
           name="description"
           content="Klaudiusz Biegacz frontend developer portfolio page"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
         <meta name="author" content="Klaudiusz Biegacz" />
         <meta name="copyright" content="Klaudiusz Biegacz" />
         <meta property="og:type" content="portfolio" />
