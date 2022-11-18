@@ -93,7 +93,7 @@ const ContactForm = (props: Props) => {
           }`}
         />
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-1">
         <label
           htmlFor="email"
           className={`text-base md:text-xl ${
@@ -116,7 +116,7 @@ const ContactForm = (props: Props) => {
           }`}
         />
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-1">
         <label
           htmlFor="message"
           className={`text-base md:text-xl ${
