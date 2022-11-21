@@ -39,7 +39,7 @@ const About = () => {
         <m.p
           className="text-base sm:text-xl"
           variants={item2}
-        >{`Web Publisher in Cheil Germany Gmbh since May 2022. I maintain pages using Adobe Experience Manager, SAP Hybris, and SalesForce.`}</m.p>
+        >{`Web Publisher in Cheil Germany GmbH since May 2022. I maintain pages using Adobe Experience Manager, SAP Hybris, and SalesForce.`}</m.p>
         <m.p
           className="text-base sm:text-xl"
           variants={item}
