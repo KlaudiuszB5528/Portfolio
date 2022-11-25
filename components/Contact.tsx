@@ -34,14 +34,14 @@ const Contact = () => {
 
   return (
     <div
-      className={`h-full md:min-h-screen py-12 flex flex-col items-center justify-center mt-10 relative z-10`}
+      className={`min-h-screen py-12 flex flex-col items-center justify-center mt-10 relative z-10`}
     >
       <m.div
         variants={container}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
-        className="flex flex-col items-center h-full w-full relative z-[1] justify-center gap-10"
+        className="flex flex-col items-center relative z-[1] justify-center gap-10"
       >
         <m.h2 variants={header} className="text-6xl">
           Get In Touch

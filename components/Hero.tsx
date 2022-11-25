@@ -33,7 +33,7 @@ const Hero = () => {
     >
       <m.div
         variants={item}
-        className="flex flex-col h-full w-1/2 gap-4 justify-center items-center text-center"
+        className="flex flex-col w-1/2 gap-4 justify-center items-center text-center"
       >
         <h1 className="text-4xl sm:text-6xl flex relative z-50">
           {name.map((letter, index) => {

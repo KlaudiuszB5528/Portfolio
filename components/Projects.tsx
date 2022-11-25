@@ -48,7 +48,7 @@ const Projects = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
-        className="h-full w-full flex flex-col items-center xl:justify-center gap-10 lg:gap-4"
+        className="flex flex-col items-center xl:justify-center gap-10 lg:gap-4"
       >
         <m.h2 variants={h2} className="mt-6 md:mt-0 text-6xl">
           Projects
