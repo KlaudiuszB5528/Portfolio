@@ -34,7 +34,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="max-h-screen py-12 flex flex-col items-center justify-center mt-10 relative z-10">
+    <div
+      className={`h-full md:min-h-screen py-12 flex flex-col items-center justify-center mt-10 relative z-10`}
+    >
       <m.div
         variants={container}
         initial="hidden"

@@ -25,7 +25,7 @@ const About = () => {
   };
 
   return (
-    <div className="max-h-screen p-12 sm:p-24 md:p-60 flex items-center relative z-10">
+    <div className="min-h-screen w-screen p-4 sm:p-12 md:p-32 flex items-center relative z-10">
       <m.div
         variants={container}
         initial="hidden"
