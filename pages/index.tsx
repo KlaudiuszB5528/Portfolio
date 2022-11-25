@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   return (
     <div
       className={`${
-        viewportHeight > 500 ? "h-screen" : ""
+        viewportHeight > 500 ? "h-screen" : "h-full"
       } scroll-smooth overflow-x-hidden bg-myBlack text-white font-amiri scrollbar-track-myBlack/80 scrollbar-white/90 scrollbar-thin root`}
     >
       <Head>
