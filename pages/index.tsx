@@ -10,7 +10,7 @@ import Contact from "../components/Contact";
 
 const Home: NextPage = () => {
   return (
-    <div className="h-screen scroll-smooth overflow-x-hidden overflow-y-scroll  bg-myBlack text-white font-amiri scrollbar-track-myBlack/80 scrollbar-white/90 scrollbar-thin">
+    <div className="h-screen scroll-smooth overflow-x-hidden bg-myBlack text-white font-amiri scrollbar-track-myBlack/80 scrollbar-white/90 scrollbar-thin root">
       <Head>
         <title>Klaudiusz Biegacz</title>
         <meta
