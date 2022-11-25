@@ -87,7 +87,7 @@ const ContactForm = (props: Props) => {
           autoComplete="off"
           value={formik.values.name}
           onChange={formik.handleChange}
-          onBlur={handleBlur}
+          onBlur={formik.handleBlur}
           className={`bg-transparent pr-2 py-2 border-b-2 border-gray-500 focus:outline-none focus:border-white ${
             formik.errors.name && formik.touched.name ? "border-red-500" : ""
           }`}
@@ -110,7 +110,7 @@ const ContactForm = (props: Props) => {
           autoComplete="off"
           value={formik.values.email}
           onChange={formik.handleChange}
-          onBlur={handleBlur}
+          onBlur={formik.handleBlur}
           className={`bg-transparent border-b-2 pr-2 py-2 border-gray-500 focus:outline-none focus:border-white ${
             formik.errors.email && formik.touched.email ? "border-red-500" : ""
           }`}
@@ -134,7 +134,7 @@ const ContactForm = (props: Props) => {
           rows={5}
           value={formik.values.message}
           onChange={formik.handleChange}
-          onBlur={handleBlur}
+          onBlur={formik.handleBlur}
           className={`bg-transparent border-b-2 pr-2 py-2 border-gray-500 focus:outline-none focus:border-white resize-none ${
             formik.errors.message && formik.touched.message
               ? "border-red-500"
