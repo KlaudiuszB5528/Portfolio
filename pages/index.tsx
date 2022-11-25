@@ -7,10 +7,27 @@ import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
+import { useState, useEffect } from "react";
 
 const Home: NextPage = () => {
+  const [viewportHeight, setVieportHeight] = useState(0);
+
+  const handleResize = () => {
+    setVieportHeight(window.innerHeight);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="h-screen scroll-smooth overflow-x-hidden bg-myBlack text-white font-amiri scrollbar-track-myBlack/80 scrollbar-white/90 scrollbar-thin root">
+    <div
+      className={`${
+        viewportHeight > 500 ? "h-screen" : ""
+      } scroll-smooth overflow-x-hidden bg-myBlack text-white font-amiri scrollbar-track-myBlack/80 scrollbar-white/90 scrollbar-thin root`}
+    >
       <Head>
         <title>Klaudiusz Biegacz</title>
         <meta
