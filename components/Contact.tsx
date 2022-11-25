@@ -7,9 +7,6 @@ import ContactForm from "./ContactForm";
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [name, setName] = useState("");
-  const [padding, setPadding] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(0);
-
   const container = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -35,24 +32,6 @@ const Contact = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const handleResize = () => {
-    setWindowHeight(window.innerHeight);
-  };
-
-  useEffect(() => {
-    setWindowHeight(window.innerHeight);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    if (windowHeight > 500) {
-      setPadding(4);
-    } else {
-      setPadding(96);
-    }
-  }, [windowHeight]);
-
   return (
     <div
       className={`h-full md:min-h-screen py-12 flex flex-col items-center justify-center mt-10 relative z-10`}
@@ -67,7 +46,7 @@ const Contact = () => {
         <m.h2 variants={header} className="text-6xl">
           Get In Touch
         </m.h2>
-        <m.div variants={content}>
+        <m.div variants={content} className="flex">
           <AnimatePresence mode="wait">
             <m.div
               key={isSubmitted ? "succes" : "form"}
