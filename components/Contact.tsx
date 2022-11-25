@@ -7,6 +7,8 @@ import ContactForm from "./ContactForm";
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [name, setName] = useState("");
+  const [sectionMargin, setSectionMargin] = useState("");
+  const [viewportHeight, setViewportHeight] = useState(0);
   const container = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -32,9 +34,23 @@ const Contact = () => {
     visible: { opacity: 1, y: 0 },
   };
 
+  const handleResize = () => {
+    setViewportHeight(window.innerHeight);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  });
+
+  useEffect(() => {
+    viewportHeight > 500 ? setSectionMargin("10") : setSectionMargin("32");
+  }, [viewportHeight]);
+
   return (
     <div
-      className={`min-h-screen py-12 flex flex-col items-center justify-center mt-10 relative z-10`}
+      className={`max-h-screen  py-12 flex flex-col flex-shrink items-center justify-center relative  z-10 mt-${sectionMargin}`}
     >
       <m.div
         variants={container}
@@ -43,7 +59,10 @@ const Contact = () => {
         viewport={{ once: true, amount: 0.5 }}
         className="flex flex-col items-center relative z-[1] justify-center gap-10"
       >
-        <m.h2 variants={header} className="text-6xl">
+        <m.h2
+          variants={header}
+          className={`text-6xl ${viewportHeight < 500 ? "hidden" : ""}`}
+        >
           Get In Touch
         </m.h2>
         <m.div variants={content} className="flex">
