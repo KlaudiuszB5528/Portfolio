@@ -42,7 +42,7 @@ const Projects = () => {
   };
 
   return (
-    <div className={`min-safe-h-screen w-screen relative z-10 pt-14`}>
+    <div className={`h-full w-screen relative z-10 py-72`}>
       <m.div
         variants={container}
         initial="hidden"

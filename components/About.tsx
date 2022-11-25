@@ -25,7 +25,7 @@ const About = () => {
   };
 
   return (
-    <div className="min-safe-h-screen w-screen p-4 sm:p-12 md:p-32 flex items-center relative z-10">
+    <div className="h-full w-screen p-4 sm:p-12 md:p-32 flex items-center relative z-10 py-72">
       <m.div
         variants={container}
         initial="hidden"
