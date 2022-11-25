@@ -35,7 +35,7 @@ const Contact = () => {
 
   return (
     <div
-      className={`min-h-full py-32 flex flex-col items-center justify-center mt-10 relative z-10`}
+      className={`h-full md:h-screen py-32 md:py-20 flex flex-col items-center justify-center relative z-10`}
     >
       <m.div
         variants={container}

@@ -29,7 +29,7 @@ const Hero = () => {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="h-full flex items-center justify-center text-6xl relative z-10 mx-auto py-60"
+      className="h-full md:h-screen flex items-center justify-center text-6xl relative z-10 mx-auto py-56 md:py-20"
     >
       <m.div
         variants={item}
@@ -64,7 +64,7 @@ const Hero = () => {
         </p>
       </m.div>
 
-      <div className="absolute bottom-28 sm:bottom-4 left-[50%] -translate-x-1/2 flex justify-center ">
+      <div className="absolute bottom-8 sm:bottom-4 left-[50%] -translate-x-1/2 flex justify-center ">
         <m.div
           variants={item}
           className="border-4 border-white rounded-full flex justify-center items-center h-12 w-6"
