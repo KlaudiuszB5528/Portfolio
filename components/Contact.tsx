@@ -46,9 +46,7 @@ const Contact = () => {
 
   return (
     <div
-      className={`h-full md:h-screen flex flex-col items-center justify-center relative z-10 py-20 ${
-        viewportHeight > 450 ? "" : ""
-      }`}
+      className={`h-full md:h-screen flex flex-col items-center justify-center relative z-10 py-20`}
     >
       <m.div
         variants={container}
@@ -57,7 +55,7 @@ const Contact = () => {
         viewport={{ once: true, amount: 0.5 }}
         className="flex flex-col items-center h-full w-full relative z-[1] justify-center gap-10"
       >
-        <m.h2 variants={header} className="text-6xl">
+        <m.h2 variants={header} className="text-5xl sm:text-6xl">
           Get In Touch
         </m.h2>
         <m.div variants={content}>
