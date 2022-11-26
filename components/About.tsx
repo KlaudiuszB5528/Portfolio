@@ -39,9 +39,9 @@ const About = () => {
 
   return (
     <div
-      className={`h-full md:h-screen w-screen py-20 p-4 ${
+      className={`h-full md:h-screen w-screen py-20 sm:py-32 p-4 ${
         viewportHeight > 650 ? "my-10" : ""
-      } sm:my-40 md:my-0 md:p-32 flex items-center relative z-10`}
+      } sm:my-32 md:my-0 md:p-32 flex items-center relative z-10`}
     >
       <m.div
         variants={container}

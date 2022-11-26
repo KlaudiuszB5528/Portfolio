@@ -13,7 +13,7 @@ const Navbar = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        delay: 6.81,
+        delay: 0.2,
         when: "beforeChildren",
         staggerChildren: 0.2,
       },

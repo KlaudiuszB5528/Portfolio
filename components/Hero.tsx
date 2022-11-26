@@ -14,7 +14,7 @@ const Hero = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        delayChildren: 7,
+        delayChildren: 0.2,
         staggerChildren: 0.2,
       },
     },
