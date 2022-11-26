@@ -41,7 +41,7 @@ const About = () => {
     <div
       className={`h-full md:h-screen w-screen py-20 p-4 ${
         viewportHeight > 650 ? "my-10" : ""
-      } sm:my-24 md:my-0 md:p-32 flex items-center relative z-10`}
+      } sm:my-40 md:my-0 md:p-32 flex items-center relative z-10`}
     >
       <m.div
         variants={container}
@@ -50,7 +50,7 @@ const About = () => {
         viewport={{ amount: 0.5, once: true }}
         className="text-center flex flex-col max-w-2xl mx-auto gap-4"
       >
-        <m.h2 variants={item} className="text-6xl mb-10 sm:mt-14 md:mt-0">
+        <m.h2 variants={item} className="text-6xl mb-10">
           About Me
         </m.h2>
         <m.p
