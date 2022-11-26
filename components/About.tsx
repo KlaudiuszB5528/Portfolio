@@ -50,7 +50,7 @@ const About = () => {
         viewport={{ amount: 0.5, once: true }}
         className="text-center flex flex-col max-w-2xl mx-auto gap-4"
       >
-        <m.h2 variants={item} className="text-6xl mb-10">
+        <m.h2 variants={item} className="text-6xl mb-10 sm:mt-14 md:mt-0">
           About Me
         </m.h2>
         <m.p
