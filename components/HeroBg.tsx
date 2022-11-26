@@ -15,7 +15,7 @@ const HeroBg = () => {
         </q>
         <p> - Milton Glaser</p>
       </div>
-      <div className="absolute hidden lg:block right-20 top-24 lg:right-11 lg:top-40 opacity-10 w-96 text-sm">
+      <div className="absolute hidden sm:block right-20 top-24 lg:right-11 lg:top-40 opacity-10 w-96 text-sm">
         <q>
           To program is to translate between the chaos of the chaos of the human
           life and the line-by-line world of the computer.
@@ -30,7 +30,7 @@ const HeroBg = () => {
         </q>
         <p> - Bill Gates</p>
       </div>
-      <div className="absolute hidden lg:block right-2 bottom-8 md:right-2 xl:right-20 md:bottom-32 opacity-10 text-sm">
+      <div className="absolute hidden sm:block right-2 bottom-8 md:right-2 xl:right-20 md:bottom-32 opacity-10 text-sm">
         <q>
           {
             " If you're already a front-end developer, well, pretend you're also wearing a pirate hat."
