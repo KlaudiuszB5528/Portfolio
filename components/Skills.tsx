@@ -51,7 +51,7 @@ const Skills = () => {
   return (
     <m.div
       ref={containerRef}
-      className="h-full md:h-screen sm:my-16 md:my-0 py-20 px-2 flex items-center relative z-10"
+      className="h-full md:h-screen sm:my-24 md:my-0 py-20 px-2 flex items-center relative z-10"
     >
       <m.div
         variants={container}
