@@ -4,7 +4,7 @@ import { motion as m, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const Welcome = () => {
-  const [isWelcome, setIsWelcome] = useState(false);
+  const [isWelcome, setIsWelcome] = useState(true);
   const [isIconChange, setIsIconChange] = useState(false);
 
   const [text, count] = useTypewriter({

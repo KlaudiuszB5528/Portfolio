@@ -34,19 +34,19 @@ const Home: NextPage = () => {
       <Navbar />
       <main>
         <Welcome />
-        <section id="hero">
+        <section id="hero" className="h-screen">
           <Hero />
         </section>
-        <section id="about">
+        <section id="about" className="h-screen">
           <About />
         </section>
-        <section id="skills">
+        <section id="skills" className="h-screen">
           <Skills />
         </section>
-        <section id="projects">
+        <section id="projects" className="h-screen">
           <Projects />
         </section>
-        <section id="contact">
+        <section id="contact" className="h-screen">
           <Contact />
         </section>
       </main>
