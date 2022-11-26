@@ -46,8 +46,8 @@ const Contact = () => {
 
   return (
     <div
-      className={`h-full md:h-screen flex flex-col items-center justify-center relative z-10 ${
-        viewportHeight > 450 ? "" : "mt-96 pt-20"
+      className={`h-full md:h-screen flex flex-col items-center justify-center relative z-10 py-20 ${
+        viewportHeight > 450 ? "" : ""
       }`}
     >
       <m.div
