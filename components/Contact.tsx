@@ -7,6 +7,7 @@ import ContactForm from "./ContactForm";
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [name, setName] = useState("");
+  const [viewportHeight, setViewportHeight] = useState(0);
 
   const container = {
     hidden: { opacity: 0, y: 50 },
@@ -33,9 +34,21 @@ const Contact = () => {
     visible: { opacity: 1, y: 0 },
   };
 
+  const handleResize = () => {
+    setViewportHeight(window.innerHeight);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
-      className={`h-full md:h-screen flex flex-col items-center justify-center relative z-10`}
+      className={`h-full md:h-screen flex flex-col items-center justify-center relative z-10 ${
+        viewportHeight > 450 ? "" : "mt-96 pt-20"
+      }`}
     >
       <m.div
         variants={container}
