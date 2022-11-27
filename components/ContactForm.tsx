@@ -36,21 +36,21 @@ const ContactForm = (props: Props) => {
       setName(values.name);
       setIsSubmitted(true);
       resetForm();
-      emailjs
-        .send(
-          "service_jog5pb8",
-          "template_ygihj7i",
-          values,
-          "_3BT3S745dWC8Drzm"
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
+      // emailjs
+      //   .send(
+      //     "service_jog5pb8",
+      //     "template_ygihj7i",
+      //     values,
+      //     "_3BT3S745dWC8Drzm"
+      //   )
+      //   .then(
+      //     (result) => {
+      //       console.log(result.text);
+      //     },
+      //     (error) => {
+      //       console.log(error.text);
+      //     }
+      //   );
     },
   });
 

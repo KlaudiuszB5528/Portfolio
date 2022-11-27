@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { AnimatePresence, motion as m } from "framer-motion";
 import Confetti from "react-confetti";
 
 interface Props {
