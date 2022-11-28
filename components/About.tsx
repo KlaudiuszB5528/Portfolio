@@ -1,7 +1,21 @@
+import { useState, useEffect } from "react";
 import { motion as m } from "framer-motion";
 import AboutBg from "./AboutBg";
 
 const About = () => {
+  const [viewportHeight, setViewportHeight] = useState(0);
+
+  const handleResize = () => {
+    setViewportHeight(window.innerHeight);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
   const container = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -25,7 +39,9 @@ const About = () => {
   };
 
   return (
-    <div className="min-h-screen w-screen p-4 sm:p-12 md:p-32 flex items-center relative z-10">
+    <div className={`h-full md:h-screen w-screen py-20 sm:py-32 p-4 ${
+      viewportHeight > 650 ? "my-10" : ""
+    } sm:my-32 md:my-0 md:p-32 flex items-center relative z-10`}>
       <m.div
         variants={container}
         initial="hidden"

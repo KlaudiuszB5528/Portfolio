@@ -62,7 +62,7 @@ const Welcome = () => {
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="h-full md:h-screen fixed inset-0 w-screen z-[100] bg-[#121212] text-gray-50 flex flex-col gap-4 justify-center items-center"
+          className="fixed inset-0 w-screen z-[100] bg-[#121212] text-gray-50 flex flex-col gap-4 justify-center items-center"
         >
           <AnimatePresence mode="wait">
             <m.div
