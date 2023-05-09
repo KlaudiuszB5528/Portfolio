@@ -1,8 +1,7 @@
-import React from "react";
-import { motion as m } from "framer-motion";
-import TextSpan from "./TextSpan";
 import HeroBg from "./HeroBg";
 import HeroCircles from "./HeroCircles";
+import TextSpan from "./TextSpan";
+import { motion as m } from "framer-motion";
 
 const Hero = () => {
   const name = "Klaudiusz Biegacz".split("");

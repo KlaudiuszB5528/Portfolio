@@ -1,8 +1,9 @@
-import { useState } from "react";
 import { AnimatePresence, motion as m } from "framer-motion";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import ProjectsSlider from "./ProjectsSlider";
+
 import ProjectsDots from "./ProjectsDots";
+import ProjectsSlider from "./ProjectsSlider";
+import { useState } from "react";
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
@@ -78,6 +79,7 @@ const Projects = () => {
         </m.div>
         <m.div variants={dots} className="flex gap-4 mx-auto">
           <ProjectsDots
+            key={currentProject + "dot"}
             currentProject={currentProject}
             setCurrentProject={setCurrentProject}
           />

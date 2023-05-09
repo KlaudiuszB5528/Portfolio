@@ -1,5 +1,3 @@
-import React from "react";
-
 interface Props {
   currentProject: number;
   setCurrentProject: (newProject: number) => void;

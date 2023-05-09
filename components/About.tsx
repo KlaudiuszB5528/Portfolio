@@ -1,29 +1,29 @@
-import { motion as m } from "framer-motion";
 import AboutBg from "./AboutBg";
+import { motion as m } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, x: 25 },
+  visible: { opacity: 1, x: 0 },
+};
+
+const item2 = {
+  hidden: { opacity: 0, x: -25 },
+  visible: { opacity: 1, x: 0 },
+};
 
 const About = () => {
-  const container = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, x: 25 },
-    visible: { opacity: 1, x: 0 },
-  };
-
-  const item2 = {
-    hidden: { opacity: 0, x: -25 },
-    visible: { opacity: 1, x: 0 },
-  };
-
   return (
     <div className="min-h-screen w-screen p-4 sm:p-12 md:p-32 flex items-center relative z-10">
       <m.div
@@ -39,7 +39,7 @@ const About = () => {
         <m.p
           className="text-base sm:text-xl"
           variants={item2}
-        >{`Web Publisher in Cheil Germany GmbH since May 2022. I maintain pages using Adobe Experience Manager, SAP Hybris, and SalesForce.`}</m.p>
+        >{`React/Next Developer in TDS Soft since December 2022.`}</m.p>
         <m.p
           className="text-base sm:text-xl"
           variants={item}
@@ -47,11 +47,7 @@ const About = () => {
         <m.p
           className="text-base sm:text-xl"
           variants={item2}
-        >{`Self-taught front-end developer. Currently learning Next.js.`}</m.p>
-        <m.p
-          className="text-base sm:text-xl"
-          variants={item}
-        >{`Ready to apply my passion for coding to a talented engineering team to develop quality solutions.`}</m.p>
+        >{`As a React/Next developer, I am passionate about building dynamic and responsive web applications that provide a seamless user experience. With my expertise in these cutting-edge technologies, I am always eager to tackle new challenges and develop innovative solutions that meet the needs of modern businesses.`}</m.p>
       </m.div>
       <AboutBg />
     </div>
