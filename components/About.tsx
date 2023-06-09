@@ -23,7 +23,7 @@ const item2 = {
   visible: { opacity: 1, x: 0 },
 };
 
-const About = () => {
+export default function About() {
   return (
     <div className="min-h-screen w-screen p-4 sm:p-12 md:p-32 flex items-center relative z-10">
       <m.div
@@ -52,6 +52,4 @@ const About = () => {
       <AboutBg />
     </div>
   );
-};
-
-export default About;
+}

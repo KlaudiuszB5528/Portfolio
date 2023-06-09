@@ -5,7 +5,7 @@ import ProjectsDots from "./ProjectsDots";
 import ProjectsSlider from "./ProjectsSlider";
 import { useState } from "react";
 
-const Projects = () => {
+export default function Projects() {
   const [currentProject, setCurrentProject] = useState(0);
 
   const nextSlide = () => {
@@ -88,6 +88,4 @@ const Projects = () => {
       <div className="absolute top-1/2 -translate-y-1/2 w-screen bg-white/5 h-[260px] -skew-y-12 -z-1" />
     </div>
   );
-};
-
-export default Projects;
+}

@@ -1,20 +1,21 @@
 import React, { useRef } from "react";
-import { motion as m } from "framer-motion";
-import { FaReact } from "react-icons/fa";
 import {
-  SiNextdotjs,
-  SiHtml5,
   SiCss3,
-  SiSass,
-  SiJavascript,
-  SiTypescript,
-  SiTailwindcss,
   SiFirebase,
+  SiHtml5,
+  SiJavascript,
+  SiNextdotjs,
+  SiSass,
+  SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
+
+import { FaReact } from "react-icons/fa";
 import SkillsBg from "./SkillsBg";
 import Traits from "./Traits";
+import { motion as m } from "framer-motion";
 
-const Skills = () => {
+export default function Skills() {
   const containerRef = useRef<HTMLDivElement>(null);
   const container = {
     hidden: { opacity: 0, y: 50 },
@@ -163,6 +164,4 @@ const Skills = () => {
       <SkillsBg />
     </m.div>
   );
-};
-
-export default Skills;
+}

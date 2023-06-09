@@ -3,7 +3,7 @@ import HeroCircles from "./HeroCircles";
 import TextSpan from "./TextSpan";
 import { motion as m } from "framer-motion";
 
-const Hero = () => {
+export default function Hero() {
   const name = "Klaudiusz Biegacz".split("");
   const description = "Frontend Developer / CS Student".split("");
   const based = "based in Poland".split("");
@@ -83,6 +83,4 @@ const Hero = () => {
       <HeroBg />
     </m.div>
   );
-};
-
-export default Hero;
+}

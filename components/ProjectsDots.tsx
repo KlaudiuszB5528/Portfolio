@@ -3,7 +3,7 @@ interface Props {
   setCurrentProject: (newProject: number) => void;
 }
 
-const ProjectsDots = (props: Props) => {
+export default function ProjectsDots(props: Props) {
   const { setCurrentProject, currentProject } = props;
   return (
     <>
@@ -33,6 +33,4 @@ const ProjectsDots = (props: Props) => {
       />
     </>
   );
-};
-
-export default ProjectsDots;
+}

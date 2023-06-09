@@ -1,11 +1,12 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
 import { AiFillHome, AiFillInfoCircle, AiFillProject } from "react-icons/ai";
+import { useEffect, useState } from "react";
+
 import { BsEnvelopeFill } from "react-icons/bs";
 import { GiSkills } from "react-icons/gi";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
-const Navbar = () => {
+export default function Navbar() {
   const [windowHeight, setWindowHeight] = useState(0);
   const container = {
     hidden: { opacity: 0 },
@@ -126,6 +127,4 @@ const Navbar = () => {
       </motion.div>
     </motion.header>
   );
-};
-
-export default Navbar;
+}

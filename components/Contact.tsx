@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
-import { motion as m, AnimatePresence } from "framer-motion";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import SubmitSuccess from "./SubmitSuccess";
-import ContactForm from "./ContactForm";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { AnimatePresence, motion as m } from "framer-motion";
+import { useEffect, useState } from "react";
 
-const Contact = () => {
+import ContactForm from "./ContactForm";
+import SubmitSuccess from "./SubmitSuccess";
+
+export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [name, setName] = useState("");
 
@@ -84,6 +85,4 @@ const Contact = () => {
       <div className="absolute top-1/2 -translate-y-1/2 w-screen bg-white opacity-[0.03] h-[260px] skew-y-12 -z-1" />
     </div>
   );
-};
-
-export default Contact;
+}

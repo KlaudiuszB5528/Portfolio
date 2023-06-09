@@ -1,14 +1,14 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Navbar from "../components/Navbar";
-import Welcome from "../components/Welcome";
-import Hero from "../components/Hero";
 import About from "../components/About";
-import Skills from "../components/Skills";
-import Projects from "../components/Projects";
 import Contact from "../components/Contact";
+import Head from "next/head";
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
+import type { NextPage } from "next";
+import Projects from "../components/Projects";
+import Skills from "../components/Skills";
+import Welcome from "../components/Welcome";
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <div className="h-screen scroll-smooth overflow-x-hidden bg-myBlack text-white font-amiri scrollbar-track-myBlack/80 scrollbar-white/90 scrollbar-thin root">
       <Head>
@@ -52,6 +52,4 @@ const Home: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default Home;
+}

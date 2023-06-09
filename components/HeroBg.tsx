@@ -1,9 +1,9 @@
-const HeroBg = () => {
+export default function HeroBg() {
   return (
     <>
       <div className="absolute left-10 top-[60%]  lg:left-20 lg:top-24 opacity-10 lg:opacity-5 text-sm w-40">
         <q>
-          {` “Design doesn't mean that every person [is] gonna like, love it, but
+          {`“Design doesn't mean that every person [is] gonna like, love it, but
           that's the creativity of [an] eye which creates something different.”`}
         </q>
         <p> – Bijay Chhetri</p>
@@ -33,13 +33,11 @@ const HeroBg = () => {
       <div className="absolute right-2 bottom-8 md:right-2 xl:right-20 md:bottom-32 opacity-10 text-xs sm:text-sm">
         <q>
           {
-            " If you're already a front-end developer, well, pretend you're also wearing a pirate hat."
+            "If you're already a front-end developer, well, pretend you're also wearing a pirate hat."
           }
         </q>
         <p> - Ethan Marcotte</p>
       </div>
     </>
   );
-};
-
-export default HeroBg;
+}

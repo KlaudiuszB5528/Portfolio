@@ -1,6 +1,6 @@
 import { motion as m } from "framer-motion";
 
-const HeroCircles = () => {
+export default function HeroCircles() {
   return (
     <>
       <m.div
@@ -61,6 +61,4 @@ const HeroCircles = () => {
       />
     </>
   );
-};
-
-export default HeroCircles;
+}

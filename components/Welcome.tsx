@@ -1,9 +1,10 @@
+import { AnimatePresence, motion as m } from "framer-motion";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 import React, { useEffect, useState } from "react";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { motion as m, AnimatePresence } from "framer-motion";
+
 import Image from "next/image";
 
-const Welcome = () => {
+export default function Welcome() {
   const [isWelcome, setIsWelcome] = useState(false);
   const [isIconChange, setIsIconChange] = useState(false);
 
@@ -94,6 +95,4 @@ const Welcome = () => {
       )}
     </AnimatePresence>
   );
-};
-
-export default Welcome;
+}

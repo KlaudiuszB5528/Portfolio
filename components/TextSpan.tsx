@@ -6,7 +6,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const TextSpan = (props: Props) => {
+export default function TextSpan(props: Props) {
   const [isAnimated, setIsAnimated] = useState(false);
   const controls = useAnimationControls();
   const animation = () => {
@@ -36,6 +36,4 @@ const TextSpan = (props: Props) => {
       {props.children}
     </m.span>
   );
-};
-
-export default TextSpan;
+}

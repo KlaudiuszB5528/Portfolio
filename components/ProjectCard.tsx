@@ -1,6 +1,7 @@
-import React from "react";
 import Image from "next/image";
+import React from "react";
 import TechDiv from "./TechDiv";
+
 type Props = {
   title: string;
   description: string;
@@ -19,7 +20,7 @@ const ProjectCard = (props: Props) => {
           src={image}
           priority={true}
           alt="project"
-          layout="fill"
+          fill
           quality={100}
           className="rounded-t-xl md:rounded-t-none md:rounded-l-xl"
         />

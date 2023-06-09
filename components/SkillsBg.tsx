@@ -1,16 +1,17 @@
-import { FaReact } from "react-icons/fa";
 import {
-  SiNextdotjs,
-  SiHtml5,
   SiCss3,
-  SiSass,
-  SiJavascript,
-  SiTypescript,
-  SiTailwindcss,
   SiGithub,
+  SiHtml5,
+  SiJavascript,
+  SiNextdotjs,
+  SiSass,
+  SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 
-const SkillsBg = () => {
+import { FaReact } from "react-icons/fa";
+
+export default function SkillsBg() {
   return (
     <>
       <SiNextdotjs className="absolute opacity-10 top-32 lg:top-[25%] lg:left-[25%] text-6xl" />
@@ -24,6 +25,4 @@ const SkillsBg = () => {
       <SiGithub className="absolute opacity-10 bottom-[5%] left-[40%] text-2xl" />
     </>
   );
-};
-
-export default SkillsBg;
+}

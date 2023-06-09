@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion as m } from "framer-motion";
+import React, { useEffect, useState } from "react";
+
 import Confetti from "react-confetti";
 
 interface Props {
   name: string;
 }
 
-const SubmitSuccess = (props: Props) => {
+export default function SubmitSuccess(props: Props) {
   const [pieces, setPieces] = useState(200);
   const { name } = props;
   const stopConfetti = () => {
@@ -24,6 +25,4 @@ const SubmitSuccess = (props: Props) => {
       <Confetti numberOfPieces={pieces} />
     </div>
   );
-};
-
-export default SubmitSuccess;
+}

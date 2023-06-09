@@ -1,6 +1,6 @@
 import { BsQuestionLg } from "react-icons/bs";
 
-const AboutBg = () => {
+export default function AboutBg() {
   return (
     <>
       <BsQuestionLg className="absolute text-7xl opacity-10 top-[25%] left-[12%]" />
@@ -15,6 +15,4 @@ const AboutBg = () => {
       <BsQuestionLg className="absolute text-5xl opacity-10 top-[34%] right-[7%]" />
     </>
   );
-};
-
-export default AboutBg;
+}
