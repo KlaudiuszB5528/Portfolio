@@ -3,7 +3,6 @@ import Contact from "../components/Contact";
 import Head from "next/head";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
-import type { NextPage } from "next";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import Welcome from "../components/Welcome";
