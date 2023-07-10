@@ -1,7 +1,9 @@
+"use client";
+
+import { motion as m } from "framer-motion";
+import TextSpan from "../Welcome/TextSpan";
 import HeroBg from "./HeroBg";
 import HeroCircles from "./HeroCircles";
-import TextSpan from "./TextSpan";
-import { motion as m } from "framer-motion";
 
 export default function Hero() {
   const name = "Klaudiusz Biegacz".split("");

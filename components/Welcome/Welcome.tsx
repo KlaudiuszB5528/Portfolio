@@ -1,6 +1,8 @@
+"use client";
+
 import { AnimatePresence, motion as m } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import React, { useEffect, useState } from "react";
 
 import Image from "next/image";
 
@@ -75,9 +77,9 @@ export default function Welcome() {
               className="relative mr-3 h-[180px] w-[180px] lg:h-[250px] lg:w-[250px]"
             >
               {isIconChange ? (
-                <Image layout="fill" src="/bighead.svg" alt="dev icon" />
+                <Image src="/bighead.svg" alt="dev icon" fill />
               ) : (
-                <Image layout="fill" src="/waving.svg" alt="dev icon" />
+                <Image src="/waving.svg" alt="dev icon" fill />
               )}
             </m.div>
           </AnimatePresence>

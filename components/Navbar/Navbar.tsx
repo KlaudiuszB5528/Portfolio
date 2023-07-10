@@ -1,10 +1,12 @@
-import { AiFillHome, AiFillInfoCircle, AiFillProject } from "react-icons/ai";
-import { useEffect, useState } from "react";
+"use client";
 
+import { useEffect, useState } from "react";
+import { AiFillHome, AiFillInfoCircle, AiFillProject } from "react-icons/ai";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
 import { BsEnvelopeFill } from "react-icons/bs";
 import { GiSkills } from "react-icons/gi";
-import Link from "next/link";
-import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [windowHeight, setWindowHeight] = useState(0);

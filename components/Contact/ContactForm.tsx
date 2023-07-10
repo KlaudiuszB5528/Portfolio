@@ -1,17 +1,19 @@
+"use client";
+
 import * as Yup from "yup";
 
-import React from "react";
 import emailjs from "@emailjs/browser";
-import { motion as m } from "framer-motion";
 import { useFormik } from "formik";
-import { useRouter } from "next/router";
+import { motion as m } from "framer-motion";
+import { useRouter } from "next/navigation";
+import React from "react";
 
 interface Props {
   setIsSubmitted: (isSubmitted: boolean) => void;
   setName: (name: string) => void;
 }
 
-function ContactForm(props: Props){
+function ContactForm(props: Props) {
   const router = useRouter();
   const { setIsSubmitted, setName } = props;
   const formik = useFormik({
@@ -153,6 +155,6 @@ function ContactForm(props: Props){
       </m.button>
     </form>
   );
-};
+}
 
 export default ContactForm;

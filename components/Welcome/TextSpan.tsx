@@ -1,3 +1,5 @@
+"use client";
+
 import { motion as m, useAnimationControls } from "framer-motion";
 
 import { useState } from "react";

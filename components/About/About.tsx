@@ -1,5 +1,7 @@
-import AboutBg from "./AboutBg";
+"use client";
+
 import { motion as m } from "framer-motion";
+import AboutBg from "./AboutBg";
 
 const container = {
   hidden: { opacity: 0, y: 50 },

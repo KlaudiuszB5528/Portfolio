@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+"use client";
+
 import {
   SiCss3,
   SiFirebase,
@@ -10,10 +11,11 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
+import { motion as m } from "framer-motion";
+import { useRef } from "react";
 import { FaReact } from "react-icons/fa";
 import SkillsBg from "./SkillsBg";
 import Traits from "./Traits";
-import { motion as m } from "framer-motion";
 
 export default function Skills() {
   const containerRef = useRef<HTMLDivElement>(null);

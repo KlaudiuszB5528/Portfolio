@@ -1,9 +1,11 @@
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { AnimatePresence, motion as m } from "framer-motion";
+"use client";
 
+import { AnimatePresence, motion as m } from "framer-motion";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+
+import { useState } from "react";
 import ContactForm from "./ContactForm";
 import SubmitSuccess from "./SubmitSuccess";
-import { useState } from "react";
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
