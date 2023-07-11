@@ -53,7 +53,7 @@ export default function Welcome() {
   useEffect(() => {
     const timerIcons = setTimeout(() => {
       setIsIconChange(true);
-    }, 3100);
+    }, 3000);
     return () => clearTimeout(timerIcons);
   }, []);
 
@@ -73,13 +73,13 @@ export default function Welcome() {
               initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -100 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.8 }}
               className="relative mr-3 h-[180px] w-[180px] lg:h-[250px] lg:w-[250px]"
             >
               {isIconChange ? (
-                <Image src="/bighead.svg" alt="dev icon" fill />
+                <Image src="/bighead.svg" alt="dev icon" fill loading="eager" />
               ) : (
-                <Image src="/waving.svg" alt="dev icon" fill />
+                <Image src="/waving.svg" alt="dev icon" fill loading="eager" />
               )}
             </m.div>
           </AnimatePresence>
