@@ -6,7 +6,6 @@ import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import { motion as m } from "framer-motion";
 import { useRouter } from "next/navigation";
-import React from "react";
 
 interface Props {
   setIsSubmitted: (isSubmitted: boolean) => void;
@@ -57,17 +56,6 @@ function ContactForm(props: Props) {
     },
   });
 
-  function handleBlur(
-    e:
-      | React.FocusEvent<HTMLInputElement>
-      | React.FocusEvent<HTMLTextAreaElement>
-  ) {
-    formik.setFieldTouched(e.target.name);
-    setTimeout(() => {
-      router.replace("/#contact");
-    }, 150);
-  }
-
   return (
     <form
       onSubmit={formik.handleSubmit}
@@ -90,7 +78,6 @@ function ContactForm(props: Props) {
           autoComplete="off"
           value={formik.values.name}
           onChange={formik.handleChange}
-          onBlur={handleBlur}
           className={`bg-transparent pr-2 py-2 border-b-2 border-gray-500 focus:outline-none focus:border-white ${
             formik.errors.name && formik.touched.name ? "border-red-500" : ""
           }`}
@@ -113,7 +100,6 @@ function ContactForm(props: Props) {
           autoComplete="off"
           value={formik.values.email}
           onChange={formik.handleChange}
-          onBlur={handleBlur}
           className={`bg-transparent border-b-2 pr-2 py-2 border-gray-500 focus:outline-none focus:border-white ${
             formik.errors.email && formik.touched.email ? "border-red-500" : ""
           }`}
@@ -137,7 +123,6 @@ function ContactForm(props: Props) {
           rows={5}
           value={formik.values.message}
           onChange={formik.handleChange}
-          onBlur={handleBlur}
           className={`bg-transparent border-b-2 pr-2 py-2 border-gray-500 focus:outline-none focus:border-white resize-none ${
             formik.errors.message && formik.touched.message
               ? "border-red-500"
