@@ -3,7 +3,6 @@
 import { motion as m } from "framer-motion";
 import SwiperComponent from "./SwiperComponent";
 import { projects } from "./projectsData";
-import image from "next/image";
 
 export default function Projects() {
   const container = {

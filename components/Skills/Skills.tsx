@@ -1,13 +1,13 @@
 "use client";
 
 import {
-  SiCss3,
+  SiD3Dotjs,
   SiFirebase,
-  SiHtml5,
-  SiJavascript,
+  SiGraphql,
   SiNextdotjs,
   SiSass,
   SiTailwindcss,
+  SiTestinglibrary,
   SiTypescript,
 } from "react-icons/si";
 
@@ -113,9 +113,9 @@ export default function Skills() {
               drag
               dragConstraints={containerRef}
               whileDrag={{ cursor: "grabbing" }}
-              className={`text-[#efd81d] ${iconStyles} ${iconBefore} hover:before:content-["JavaScript"]`}
+              className={`text-[#d932a2] ${iconStyles} ${iconBefore} hover:before:content-["GraphQL"]`}
             >
-              <SiJavascript className="bg-myBlack" />
+              <SiGraphql />
             </m.div>
             <m.div
               variants={item}
@@ -140,18 +140,18 @@ export default function Skills() {
               drag
               dragConstraints={containerRef}
               whileDrag={{ cursor: "grabbing" }}
-              className={`text-[#dd4b25] ${iconStyles} ${iconBefore} hover:before:content-["HTML5"]`}
+              className={`text-[#dd4b25] ${iconStyles} ${iconBefore} hover:before:content-["RTL"]`}
             >
-              <SiHtml5 />
+              <SiTestinglibrary />
             </m.div>
             <m.div
               variants={item}
               drag
               dragConstraints={containerRef}
               whileDrag={{ cursor: "grabbing" }}
-              className={`text-[#264de4] ${iconStyles} ${iconBefore} hover:before:content-["CSS3"]`}
+              className={`text-[#f68948] ${iconStyles} ${iconBefore} hover:before:content-["D3.js"]`}
             >
-              <SiCss3 />
+              <SiD3Dotjs />
             </m.div>
             <m.div
               variants={item}

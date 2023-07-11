@@ -29,10 +29,12 @@ export default function TextSpan(props: Props) {
   return (
     <m.span
       animate={controls}
-      onMouseOver={() => {
+      onMouseOver={function () {
         if (!isAnimated) animation();
       }}
-      onAnimationComplete={() => setIsAnimated(false)}
+      onAnimationComplete={function () {
+        setIsAnimated(false);
+      }}
       className="select-none"
     >
       {props.children}

@@ -57,16 +57,16 @@ function ContactForm(props: Props) {
     },
   });
 
-  const handleBlur = (
+  function handleBlur(
     e:
       | React.FocusEvent<HTMLInputElement>
       | React.FocusEvent<HTMLTextAreaElement>
-  ) => {
+  ) {
     formik.setFieldTouched(e.target.name);
     setTimeout(() => {
       router.replace("/#contact");
     }, 150);
-  };
+  }
 
   return (
     <form
