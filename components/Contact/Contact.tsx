@@ -48,7 +48,7 @@ export default function Contact() {
         <m.h2 variants={header} className="text-6xl">
           Get In Touch
         </m.h2>
-        <m.div variants={content}>
+        <m.div variants={content} className="md:w-1/2">
           <AnimatePresence mode="wait">
             <m.div
               key={isSubmitted ? "succes" : "form"}

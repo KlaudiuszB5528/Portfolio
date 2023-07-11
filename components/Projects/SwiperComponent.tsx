@@ -52,7 +52,7 @@ export default function SwiperComponent({ slidesData }: ISwiperProps) {
       };
       Object.assign(swiperContainer, params);
     }
-    // @ts-ignore
+    // @ts-expect-error - swiperContainer is not null
     swiperContainer?.initialize();
   }, []);
 
