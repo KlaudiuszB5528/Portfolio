@@ -55,9 +55,9 @@ export default function Hero() {
           })}
         </h2>
         <p className="text-lg sm:text-xl text-gray-500 flex relative z-50">
-          {based.map((letter, index) => {
+          {based.map((letter) => {
             return (
-              <TextSpan key={index + 50}>
+              <TextSpan key={Math.random() + letter}>
                 {letter === " " ? "\u00A0" : letter}
               </TextSpan>
             );
