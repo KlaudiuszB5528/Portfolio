@@ -5,7 +5,6 @@ import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import { motion as m } from "framer-motion";
-import { useRouter } from "next/navigation";
 
 interface Props {
   setIsSubmitted: (isSubmitted: boolean) => void;
@@ -13,7 +12,6 @@ interface Props {
 }
 
 function ContactForm(props: Props) {
-  const router = useRouter();
   const { setIsSubmitted, setName } = props;
   const formik = useFormik({
     initialValues: {
