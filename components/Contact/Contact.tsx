@@ -37,7 +37,10 @@ export default function Contact() {
   };
 
   return (
-    <div className="h-full md:min-h-screen py-12 flex flex-col items-center justify-center mt-10 relative z-10">
+    <section
+      id="contact"
+      className="h-full md:min-h-screen py-12 flex flex-col items-center justify-center mt-10 relative z-10"
+    >
       <m.div
         variants={container}
         initial="hidden"
@@ -83,6 +86,6 @@ export default function Contact() {
         </m.footer>
       </m.div>
       <div className="absolute top-1/2 -translate-y-1/2 w-screen bg-white opacity-[0.03] h-[260px] skew-y-12 -z-1" />
-    </div>
+    </section>
   );
 }

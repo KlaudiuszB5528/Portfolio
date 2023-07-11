@@ -54,7 +54,8 @@ export default function Skills() {
     "relative overflow-hidden bg-gray-50 rounded-full p-4 lg:p-6 flex items-center justify-center cursor-grab";
 
   return (
-    <m.div
+    <m.section
+      id="skills"
       ref={containerRef}
       className="min-h-screen w-screen p-4 sm:p-12 md:p-20 flex items-center relative z-10"
     >
@@ -166,6 +167,6 @@ export default function Skills() {
         </m.div>
       </m.div>
       <SkillsBg />
-    </m.div>
+    </m.section>
   );
 }

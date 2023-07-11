@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${island.variable} ${amiri.variable}`}
-        suppressHydrationWarning={true}
+        suppressHydrationWarning
       >
         {children}
       </body>

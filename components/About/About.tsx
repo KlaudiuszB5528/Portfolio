@@ -27,7 +27,10 @@ const item2 = {
 
 export default function About() {
   return (
-    <div className="min-h-screen w-screen p-4 sm:p-12 md:p-32 flex items-center relative z-10">
+    <section
+      id="about"
+      className="min-h-screen w-screen p-4 sm:p-12 md:p-32 flex items-center relative z-10"
+    >
       <m.div
         variants={container}
         initial="hidden"
@@ -53,6 +56,6 @@ export default function About() {
         </m.p>
       </m.div>
       <AboutBg />
-    </div>
+    </section>
   );
 }

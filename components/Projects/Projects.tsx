@@ -28,7 +28,10 @@ export default function Projects() {
   };
 
   return (
-    <div className="min-h-screen w-screen relative z-10 pt-14">
+    <section
+      id="projects"
+      className="min-h-screen w-screen relative z-10 pt-14"
+    >
       <m.div
         variants={container}
         initial="hidden"
@@ -44,6 +47,6 @@ export default function Projects() {
         </m.div>
       </m.div>
       <div className="absolute top-1/2 -translate-y-1/2 w-screen bg-white/5 h-[260px] -skew-y-12 -z-1" />
-    </div>
+    </section>
   );
 }

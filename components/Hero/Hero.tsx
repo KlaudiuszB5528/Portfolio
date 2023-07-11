@@ -26,7 +26,8 @@ export default function Hero() {
   };
 
   return (
-    <m.div
+    <m.section
+      id="hero"
       variants={container}
       initial="hidden"
       animate="visible"
@@ -83,6 +84,6 @@ export default function Hero() {
       </div>
       <HeroCircles />
       <HeroBg />
-    </m.div>
+    </m.section>
   );
 }
