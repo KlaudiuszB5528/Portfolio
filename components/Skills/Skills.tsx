@@ -48,8 +48,10 @@ export default function Skills() {
     visible: { opacity: 1, y: 0 },
   };
 
-  const iconBefore = `before:-translate-y-full before:transition-all before:duration-200 hover:before:translate-y-0 before:opacity-90 before:absolute before:inset-0 before:text-myBlack before:bg-white before:font-bold before:flex before:items-center before:justify-center before:pb-2 before:rounded-full before:text-lg`;
-  const iconStyles = `relative overflow-hidden bg-gray-50 rounded-full p-4 lg:p-6 flex items-center justify-center cursor-grab`;
+  const iconBefore =
+    "before:-translate-y-full before:transition-all before:duration-200 hover:before:translate-y-0 before:opacity-90 before:absolute before:inset-0 before:text-myBlack before:bg-white before:font-bold before:flex before:items-center before:justify-center before:pb-2 before:rounded-full before:text-lg";
+  const iconStyles =
+    "relative overflow-hidden bg-gray-50 rounded-full p-4 lg:p-6 flex items-center justify-center cursor-grab";
 
   return (
     <m.div

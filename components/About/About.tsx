@@ -38,18 +38,19 @@ export default function About() {
         <m.h2 variants={item} className="text-6xl mb-10">
           About Me
         </m.h2>
-        <m.p
-          className="text-base sm:text-xl"
-          variants={item2}
-        >{`React/Next Developer in TDS Soft since December 2022.`}</m.p>
-        <m.p
-          className="text-base sm:text-xl"
-          variants={item}
-        >{`Third year CS student at the Kielce University of Technology.`}</m.p>
-        <m.p
-          className="text-base sm:text-xl"
-          variants={item2}
-        >{`As a React/Next developer, I am passionate about building dynamic and responsive web applications that provide a seamless user experience. With my expertise in these cutting-edge technologies, I am always eager to tackle new challenges and develop innovative solutions that meet the needs of modern businesses.`}</m.p>
+        <m.p className="text-base sm:text-xl" variants={item2}>
+          React/Next Developer in TDS Soft since December 2022.
+        </m.p>
+        <m.p className="text-base sm:text-xl" variants={item}>
+          Third year CS student at the Kielce University of Technology.
+        </m.p>
+        <m.p className="text-base sm:text-xl" variants={item2}>
+          As a React/Next developer, I am passionate about building dynamic and
+          responsive web applications that provide a seamless user experience.
+          With my expertise in these cutting-edge technologies, I am always
+          eager to tackle new challenges and develop innovative solutions that
+          meet the needs of modern businesses.
+        </m.p>
       </m.div>
       <AboutBg />
     </div>

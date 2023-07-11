@@ -1,21 +1,11 @@
 "use client";
 
 import { motion as m } from "framer-motion";
-
-import { useState } from "react";
 import SwiperComponent from "./SwiperComponent";
 import { projects } from "./projectsData";
+import image from "next/image";
 
 export default function Projects() {
-  const [currentProject, setCurrentProject] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentProject(currentProject === 3 ? 0 : currentProject + 1);
-  };
-  const prevSlide = () => {
-    setCurrentProject(currentProject === 0 ? 3 : currentProject - 1);
-  };
-
   const container = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -38,13 +28,8 @@ export default function Projects() {
     visible: { opacity: 1, x: 0 },
   };
 
-  const dots = {
-    hidden: { opacity: 0, x: 120 },
-    visible: { opacity: 1, x: 0 },
-  };
-
   return (
-    <div className={`min-h-screen w-screen relative z-10 pt-14`}>
+    <div className="min-h-screen w-screen relative z-10 pt-14">
       <m.div
         variants={container}
         initial="hidden"

@@ -10,7 +10,7 @@ export default function Welcome() {
   const [isWelcome, setIsWelcome] = useState(false);
   const [isIconChange, setIsIconChange] = useState(false);
 
-  const [text, count] = useTypewriter({
+  const [text] = useTypewriter({
     words: ["Hello World!", "I'm Klaudiusz"],
     typeSpeed: 85,
     deleteSpeed: 100,

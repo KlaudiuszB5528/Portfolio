@@ -10,7 +10,7 @@ type Props = {
   codeLink: string;
 };
 
-const ProjectCard = (props: Props) => {
+function ProjectCard(props: Props) {
   const { title, description, image, technologies, liveLink, codeLink } = props;
   return (
     <article className="flex flex-col w-screen xl:w-[1200px] h-[400px] sm:h-[450px] xl:h-[500px] mx-auto md:grid md:grid-cols-4 p-2">
@@ -55,6 +55,6 @@ const ProjectCard = (props: Props) => {
       </div>
     </article>
   );
-};
+}
 
 export default ProjectCard;
