@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
-import { motion as m, AnimatePresence } from "framer-motion";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import SubmitSuccess from "./SubmitSuccess";
-import ContactForm from "./ContactForm";
+"use client";
 
-const Contact = () => {
+import { AnimatePresence, motion as m } from "framer-motion";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+
+import { useState } from "react";
+import ContactForm from "./ContactForm";
+import SubmitSuccess from "./SubmitSuccess";
+
+export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [name, setName] = useState("");
 
@@ -34,8 +37,9 @@ const Contact = () => {
   };
 
   return (
-    <div
-      className={`h-full md:min-h-screen py-12 flex flex-col items-center justify-center mt-10 relative z-10`}
+    <section
+      id="contact"
+      className="h-full md:min-h-screen py-12 flex flex-col items-center justify-center mt-10 relative z-10"
     >
       <m.div
         variants={container}
@@ -47,7 +51,7 @@ const Contact = () => {
         <m.h2 variants={header} className="text-6xl">
           Get In Touch
         </m.h2>
-        <m.div variants={content}>
+        <m.div variants={content} className="md:w-1/2">
           <AnimatePresence mode="wait">
             <m.div
               key={isSubmitted ? "succes" : "form"}
@@ -82,8 +86,6 @@ const Contact = () => {
         </m.footer>
       </m.div>
       <div className="absolute top-1/2 -translate-y-1/2 w-screen bg-white opacity-[0.03] h-[260px] skew-y-12 -z-1" />
-    </div>
+    </section>
   );
-};
-
-export default Contact;
+}

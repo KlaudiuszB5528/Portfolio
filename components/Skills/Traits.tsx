@@ -1,7 +1,7 @@
 import React from "react";
 import { motion as m } from "framer-motion";
 
-const Traits = () => {
+export default function Traits() {
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -24,6 +24,4 @@ const Traits = () => {
       <div className="p-6 flex justify-center items-center">Persistent</div>
     </m.div>
   );
-};
-
-export default Traits;
+}

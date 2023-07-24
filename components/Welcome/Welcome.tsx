@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { motion as m, AnimatePresence } from "framer-motion";
+"use client";
+
+import { AnimatePresence, motion as m } from "framer-motion";
+import { useEffect, useState } from "react";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
+
 import Image from "next/image";
 
-const Welcome = () => {
+export default function Welcome() {
   const [isWelcome, setIsWelcome] = useState(false);
   const [isIconChange, setIsIconChange] = useState(false);
 
-  const [text, count] = useTypewriter({
+  const [text] = useTypewriter({
     words: ["Hello World!", "I'm Klaudiusz"],
     typeSpeed: 85,
     deleteSpeed: 100,
@@ -50,7 +53,7 @@ const Welcome = () => {
   useEffect(() => {
     const timerIcons = setTimeout(() => {
       setIsIconChange(true);
-    }, 3100);
+    }, 3000);
     return () => clearTimeout(timerIcons);
   }, []);
 
@@ -70,13 +73,13 @@ const Welcome = () => {
               initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -100 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.8 }}
               className="relative mr-3 h-[180px] w-[180px] lg:h-[250px] lg:w-[250px]"
             >
               {isIconChange ? (
-                <Image layout="fill" src="/bighead.svg" alt="dev icon" />
+                <Image src="/bighead.svg" alt="dev icon" fill loading="eager" />
               ) : (
-                <Image layout="fill" src="/waving.svg" alt="dev icon" />
+                <Image src="/waving.svg" alt="dev icon" fill loading="eager" />
               )}
             </m.div>
           </AnimatePresence>
@@ -94,6 +97,4 @@ const Welcome = () => {
       )}
     </AnimatePresence>
   );
-};
-
-export default Welcome;
+}

@@ -1,6 +1,6 @@
-import React from "react";
 import Image from "next/image";
 import TechDiv from "./TechDiv";
+
 type Props = {
   title: string;
   description: string;
@@ -10,16 +10,15 @@ type Props = {
   codeLink: string;
 };
 
-const ProjectCard = (props: Props) => {
+function ProjectCard(props: Props) {
   const { title, description, image, technologies, liveLink, codeLink } = props;
   return (
     <article className="flex flex-col w-screen xl:w-[1200px] h-[400px] sm:h-[450px] xl:h-[500px] mx-auto md:grid md:grid-cols-4 p-2">
       <div className="h-full relative flex-2 md:col-span-3">
         <Image
           src={image}
-          priority={true}
           alt="project"
-          layout="fill"
+          fill
           quality={100}
           className="rounded-t-xl md:rounded-t-none md:rounded-l-xl"
         />
@@ -55,6 +54,6 @@ const ProjectCard = (props: Props) => {
       </div>
     </article>
   );
-};
+}
 
 export default ProjectCard;

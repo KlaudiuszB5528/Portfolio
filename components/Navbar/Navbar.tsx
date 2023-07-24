@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
+"use client";
+
+import { useEffect, useState } from "react";
 import { AiFillHome, AiFillInfoCircle, AiFillProject } from "react-icons/ai";
+
+import { motion } from "framer-motion";
 import { BsEnvelopeFill } from "react-icons/bs";
 import { GiSkills } from "react-icons/gi";
 
-const Navbar = () => {
+export default function Navbar() {
   const [windowHeight, setWindowHeight] = useState(0);
   const container = {
     hidden: { opacity: 0 },
@@ -48,25 +50,26 @@ const Navbar = () => {
       } items-center justify-between text-xl sm:text-2xl py-2 lg:py-4 px-8 md:h-20 bg-myBlack/90 backdrop-blur-sm text-white`}
     >
       <motion.h2 variants={logo} className="font-island text-2xl sm:text-4xl">
-        {`<KB>`}
+        {"<KB>"}
       </motion.h2>
       <motion.div variants={navigation}>
         <ul className="flex gap-4">
-          <Link href="#hero" scroll={false}>
-            <motion.li
-              whileHover={{
-                scale: 1.05,
-              }}
-              whileTap={{ scale: 0.9 }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-              }}
-            >
+          <motion.li
+            whileHover={{
+              scale: 1.05,
+            }}
+            whileTap={{ scale: 0.9 }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+            }}
+          >
+            <a href="#hero">
               <AiFillHome />
-            </motion.li>
-          </Link>
-          <Link href="#about" scroll={false}>
+            </a>
+          </motion.li>
+
+          <a href="#about">
             <motion.li
               whileHover={{
                 scale: 1.05,
@@ -79,8 +82,8 @@ const Navbar = () => {
             >
               <AiFillInfoCircle />
             </motion.li>
-          </Link>
-          <Link href="#skills" scroll={false}>
+          </a>
+          <a href="#skills">
             <motion.li
               whileHover={{
                 scale: 1.05,
@@ -93,8 +96,8 @@ const Navbar = () => {
             >
               <GiSkills />
             </motion.li>
-          </Link>
-          <Link href="#projects" scroll={false}>
+          </a>
+          <a href="#projects">
             <motion.li
               whileHover={{
                 scale: 1.05,
@@ -107,8 +110,8 @@ const Navbar = () => {
             >
               <AiFillProject />
             </motion.li>
-          </Link>
-          <Link href="#contact" scroll={false}>
+          </a>
+          <a href="#contact">
             <motion.li
               whileHover={{
                 scale: 1.05,
@@ -121,11 +124,9 @@ const Navbar = () => {
             >
               <BsEnvelopeFill />
             </motion.li>
-          </Link>
+          </a>
         </ul>
       </motion.div>
     </motion.header>
   );
-};
-
-export default Navbar;
+}

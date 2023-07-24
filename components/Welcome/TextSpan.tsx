@@ -1,3 +1,5 @@
+"use client";
+
 import { motion as m, useAnimationControls } from "framer-motion";
 
 import { useState } from "react";
@@ -6,7 +8,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const TextSpan = (props: Props) => {
+export default function TextSpan(props: Props) {
   const [isAnimated, setIsAnimated] = useState(false);
   const controls = useAnimationControls();
   const animation = () => {
@@ -27,15 +29,15 @@ const TextSpan = (props: Props) => {
   return (
     <m.span
       animate={controls}
-      onMouseOver={() => {
+      onMouseOver={function () {
         if (!isAnimated) animation();
       }}
-      onAnimationComplete={() => setIsAnimated(false)}
+      onAnimationComplete={function () {
+        setIsAnimated(false);
+      }}
       className="select-none"
     >
       {props.children}
     </m.span>
   );
-};
-
-export default TextSpan;
+}

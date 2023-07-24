@@ -1,20 +1,23 @@
-import React, { useRef } from "react";
-import { motion as m } from "framer-motion";
-import { FaReact } from "react-icons/fa";
+"use client";
+
 import {
-  SiNextdotjs,
-  SiHtml5,
-  SiCss3,
-  SiSass,
-  SiJavascript,
-  SiTypescript,
-  SiTailwindcss,
+  SiD3Dotjs,
   SiFirebase,
+  SiGraphql,
+  SiNextdotjs,
+  SiSass,
+  SiTailwindcss,
+  SiTestinglibrary,
+  SiTypescript,
 } from "react-icons/si";
+
+import { motion as m } from "framer-motion";
+import { useRef } from "react";
+import { FaReact } from "react-icons/fa";
 import SkillsBg from "./SkillsBg";
 import Traits from "./Traits";
 
-const Skills = () => {
+export default function Skills() {
   const containerRef = useRef<HTMLDivElement>(null);
   const container = {
     hidden: { opacity: 0, y: 50 },
@@ -45,11 +48,14 @@ const Skills = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const iconBefore = `before:-translate-y-full before:transition-all before:duration-200 hover:before:translate-y-0 before:opacity-90 before:absolute before:inset-0 before:text-myBlack before:bg-white before:font-bold before:flex before:items-center before:justify-center before:pb-2 before:rounded-full before:text-lg`;
-  const iconStyles = `relative overflow-hidden bg-gray-50 rounded-full p-4 lg:p-6 flex items-center justify-center cursor-grab`;
+  const iconBefore =
+    "before:-translate-y-full before:transition-all before:duration-200 hover:before:translate-y-0 before:opacity-90 before:absolute before:inset-0 before:text-myBlack before:bg-white before:font-bold before:flex before:items-center before:justify-center before:pb-2 before:rounded-full before:text-lg";
+  const iconStyles =
+    "relative overflow-hidden bg-gray-50 rounded-full p-4 lg:p-6 flex items-center justify-center cursor-grab";
 
   return (
-    <m.div
+    <m.section
+      id="skills"
       ref={containerRef}
       className="min-h-screen w-screen p-4 sm:p-12 md:p-20 flex items-center relative z-10"
     >
@@ -108,9 +114,9 @@ const Skills = () => {
               drag
               dragConstraints={containerRef}
               whileDrag={{ cursor: "grabbing" }}
-              className={`text-[#efd81d] ${iconStyles} ${iconBefore} hover:before:content-["JavaScript"]`}
+              className={`text-[#d932a2] ${iconStyles} ${iconBefore} hover:before:content-["GraphQL"]`}
             >
-              <SiJavascript className="bg-myBlack" />
+              <SiGraphql />
             </m.div>
             <m.div
               variants={item}
@@ -135,18 +141,18 @@ const Skills = () => {
               drag
               dragConstraints={containerRef}
               whileDrag={{ cursor: "grabbing" }}
-              className={`text-[#dd4b25] ${iconStyles} ${iconBefore} hover:before:content-["HTML5"]`}
+              className={`text-[#dd4b25] ${iconStyles} ${iconBefore} hover:before:content-["RTL"]`}
             >
-              <SiHtml5 />
+              <SiTestinglibrary />
             </m.div>
             <m.div
               variants={item}
               drag
               dragConstraints={containerRef}
               whileDrag={{ cursor: "grabbing" }}
-              className={`text-[#264de4] ${iconStyles} ${iconBefore} hover:before:content-["CSS3"]`}
+              className={`text-[#f68948] ${iconStyles} ${iconBefore} hover:before:content-["D3.js"]`}
             >
-              <SiCss3 />
+              <SiD3Dotjs />
             </m.div>
             <m.div
               variants={item}
@@ -161,8 +167,6 @@ const Skills = () => {
         </m.div>
       </m.div>
       <SkillsBg />
-    </m.div>
+    </m.section>
   );
-};
-
-export default Skills;
+}

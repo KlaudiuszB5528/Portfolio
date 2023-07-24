@@ -1,9 +1,11 @@
+"use client";
+
+import { motion as m } from "framer-motion";
+import TextSpan from "../Welcome/TextSpan";
 import HeroBg from "./HeroBg";
 import HeroCircles from "./HeroCircles";
-import TextSpan from "./TextSpan";
-import { motion as m } from "framer-motion";
 
-const Hero = () => {
+export default function Hero() {
   const name = "Klaudiusz Biegacz".split("");
   const description = "Frontend Developer / CS Student".split("");
   const based = "based in Poland".split("");
@@ -24,7 +26,8 @@ const Hero = () => {
   };
 
   return (
-    <m.div
+    <m.section
+      id="hero"
       variants={container}
       initial="hidden"
       animate="visible"
@@ -53,9 +56,9 @@ const Hero = () => {
           })}
         </h2>
         <p className="text-lg sm:text-xl text-gray-500 flex relative z-50">
-          {based.map((letter, index) => {
+          {based.map((letter) => {
             return (
-              <TextSpan key={index + 50}>
+              <TextSpan key={Math.random() + letter}>
                 {letter === " " ? "\u00A0" : letter}
               </TextSpan>
             );
@@ -81,8 +84,6 @@ const Hero = () => {
       </div>
       <HeroCircles />
       <HeroBg />
-    </m.div>
+    </m.section>
   );
-};
-
-export default Hero;
+}

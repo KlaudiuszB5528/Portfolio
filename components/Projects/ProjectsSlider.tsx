@@ -4,7 +4,7 @@ interface Props {
   currentProject: number;
 }
 
-const ProjectsSlider = (props: Props) => {
+export default function ProjectsSlider(props: Props) {
   const { currentProject } = props;
 
   return (
@@ -61,6 +61,4 @@ const ProjectsSlider = (props: Props) => {
       )}
     </>
   );
-};
-
-export default ProjectsSlider;
+}
