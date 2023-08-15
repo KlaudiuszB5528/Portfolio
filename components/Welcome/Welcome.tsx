@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 import Image from "next/image";
+import dev from "../../public/bighead.svg";
+import wave from "../../public/waving.svg";
 
 export default function Welcome() {
   const [isWelcome, setIsWelcome] = useState(false);
@@ -77,9 +79,9 @@ export default function Welcome() {
               className="relative mr-3 h-[180px] w-[180px] lg:h-[250px] lg:w-[250px]"
             >
               {isIconChange ? (
-                <Image src="/bighead.svg" alt="dev icon" fill loading="eager" />
+                <Image src={dev} alt="dev icon" fill />
               ) : (
-                <Image src="/waving.svg" alt="dev icon" fill loading="eager" />
+                <Image src={wave} alt="dev icon" fill />
               )}
             </m.div>
           </AnimatePresence>

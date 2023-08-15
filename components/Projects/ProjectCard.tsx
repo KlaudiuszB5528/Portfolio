@@ -18,8 +18,8 @@ function ProjectCard(props: Props) {
         <Image
           src={image}
           alt="project"
+          priority
           fill
-          quality={100}
           className="rounded-t-xl md:rounded-t-none md:rounded-l-xl"
         />
       </div>
